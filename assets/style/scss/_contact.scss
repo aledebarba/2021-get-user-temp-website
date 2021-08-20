@@ -1,0 +1,414 @@
+.widget-contact {
+	.hold {
+		@include flexbox();
+	}
+	
+	.form-hold {
+		//@include order(2);
+		width: 70%;
+		padding-right: $space-regular;
+	}
+	
+	.info-hold {
+		//@include order(1);
+		width: 30%;
+		
+		.item {
+			padding: $space-xx-small;
+			background: $color-brand;
+			border-radius: $border-radius-regular;
+			
+			p,
+			a {
+				color: $color-base;
+			}
+			
+			p {
+				font-size: $font-small;
+			}
+			
+			strong {
+				@include flexinline();
+				@include align-items(center);
+				width: 100%;
+				margin-bottom: 5px;
+				
+				i {
+					margin-right: 5px;
+					//font-size: 90%;
+				}
+			}
+				
+			&+.item {
+				margin-top: $space-xx-small;
+			}
+		}
+	}
+	
+		@include for-phone-and-tablet-portrait {
+			.hold {
+				@include flex-direction(column);
+			}
+			
+			.form-hold,
+			.info-hold {
+				width: 100%;
+				padding: 0;
+			}
+			
+			.form-hold {
+				//@include order(1);
+			}
+			
+			.info-hold {
+				//@include order(2);
+				margin-top: $space-mobile;
+				text-align: center;
+				
+				.item {
+					padding: $space-mobile-small;
+				}
+			}
+		}
+}
+
+// contact form
+#contact {
+	position:relative;
+	
+	.form-area,
+	.form-quiz .wpcf7-form-control-wrap {
+		//display: block;
+		//height: 3em;
+		margin: 0;
+	}
+	
+	.form-area,
+	.form-text,
+	.form-quiz .wpcf7-form-control-wrap {
+		//padding-left: calc(#{$space-x-small} + 20%);
+		//text-align: left;
+	}
+
+	.form-title,
+	.wpcf7-quiz-label {
+		display: block;
+		/*
+		position: absolute;
+		left: 0;
+		width: 20%;
+		height: 100%;
+		padding-top: 1.1em;
+		font-size: $font-small;
+		font-weight: $font-weight-bold;
+		text-transform: uppercase;
+		letter-spacing: .07em;
+		text-align: right;
+		*/
+		
+		//margin-bottom: $space-xx-small;
+		margin-bottom: 10px;
+		font-weight: $font-weight-bold;
+	}
+
+	.form-area,
+	.form-text,
+	.form-quiz {
+		position: relative;
+		width: 100%;
+		//margin-bottom: $space-regular;
+		margin-bottom: 40px;
+	}
+
+	.form-area input,
+	.form-text textarea,
+	.form-quiz input {
+		width: 100%;
+		margin: 0;
+		border: 1px solid #E0E0E0;
+		color: $color-brand-shade;
+		font-weight: $font-weight-regular;
+		background: $grey-light;
+		border-radius: $border-radius-regular;
+	}
+
+	.form-area input,
+	.form-quiz input {
+		height: 3em;
+		padding: 0 $space-xx-small;
+	}
+
+	.form-text textarea {
+		resize: none;
+		//height: 20em;
+		height: 200px;
+		padding: $space-xx-small;
+	}
+
+	.form-quiz input {
+		width: 40%;
+	}
+
+	.form-button {
+		//margin-top: $space-large;
+		//text-align: right;
+		
+		input {
+			cursor: pointer;
+			@include flexinline();
+    		@include align-items(center);
+			
+			min-width: $button-size;
+			width: auto;
+			height: $button-size;
+    
+			margin: 0;
+			padding: 0 $button-padding;
+			
+			border-width: .1em;
+			border-style: solid;
+			border-color: transparent;
+			color: $button-color !important;
+
+			font-weight: $button-font-weight;
+			//font-size: $button-font-size;
+			font-size: calc(#{$button-font-size} * .8);
+			font-family: $button-font-family;
+			line-height: 1;
+			//@include text-uppercase;
+			text-decoration: none !important;
+
+			background-color: $button-background;
+			border-radius: $border-radius-button;
+		}
+	}
+
+	.notice {
+		position: relative;
+		margin-top: .25em;
+		//padding-left: calc(#{$space-x-small} + 20%);
+		
+		.text {
+			font-size: 75%;
+			line-height: 1.5em;
+		}
+	}
+
+	input[type=text]:focus,
+	input[type=email]:focus,
+	textarea:focus {
+		border-color: $color-brand;
+	}
+	
+	input[type=text],
+	input[type=email],
+	input[type=submit],
+	textarea {
+		outline: none;
+	}
+	
+	br {
+		display: none;
+	}
+	
+	@include for-phone-and-tablet-portrait {
+		margin-bottom: $space-large;
+		
+        .form-area,
+        .form-quiz .wpcf7-form-control-wrap,
+        .form-text {
+            padding-left: 0;
+            height: auto;
+        }
+
+        .form-title,
+        .wpcf7-quiz-label {
+            position:relative;
+            left:auto; width:auto;
+            margin-bottom:.2em;
+            font-size:80%;
+            text-align:left;
+        }
+
+        .form-area,
+        .form-quiz,
+        .form-text {
+            margin-bottom: .75em;
+        }
+		
+		.form-quiz input {
+			width: 100%;
+		}
+
+		.form-button {
+			margin-top: 1em;
+			text-align: center;
+
+			input {
+				@include justify-content(center);
+				width: 100% !important;
+				//font-size: 80%;
+			}
+		}
+	
+		.notice {
+			padding-left: 0;
+
+			.text {
+				font-size: 80%;
+			}
+		}
+	}
+}
+
+.widget-contact {
+	.wpcf7-response-output {
+		clear: both;
+		//position: relative;
+		margin-top: $space-regular;
+		//margin-left: calc(#{$space-x-small} + 20%);
+		padding: $space-small;
+		color: $color-base;
+		font-size: $font-small;
+		line-height: $line-height-regular;
+		background: $color-brand;
+		text-align: center;
+		border-radius: $border-radius-regular;
+	}
+
+	.wpcf7 .screen-reader-response {
+		display: none;
+		}
+
+	.wpcf7-mail-sent-ok,
+	.wpcf7-mail-sent-ng,
+	.wpcf7-spam-blocked,
+	.wpcf7-validation-errors {
+		background: $color-brand;
+	}
+
+	.wpcf7-not-valid-tip {
+		/*
+		position: absolute;
+		@include flexinline();
+    	@include align-items(center);
+		z-index: 100;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0 1em;
+		color: #fff;
+		font-size: 70%;
+		text-align: center;
+		background: #d95358;
+		border-radius: 0 $border-radius-regular $border-radius-regular 0;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -7px;
+				margin-top: -8px;
+				border-top: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-right: 8px solid #d95358;
+		}
+		*/
+		
+		display: block;
+		margin-top: $space-xx-small;
+		padding: 0;
+		font-size: $font-small;
+		color: #d95358;
+	}
+
+	.form-quiz .wpcf7-not-valid-tip {
+		/*
+		top: auto;
+		right: auto;
+		bottom: -4.5em;
+		left: calc(#{$space-x-small} + 20%);
+		padding: 1.5em 1em;
+		line-height: 1;
+		border-radius: $border-radius-regular;
+
+		&:after {
+			top: -7px;
+			left: 8px;
+			margin-top: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #d95358;
+			border-top: none;
+		}
+		*/
+	}
+
+	.wpcf7-list-item {
+		margin-left: .5em;
+		}
+
+	.wpcf7-display-none {
+		display: none;
+		}
+
+	.wpcf7 img.ajax-loader {
+		position: absolute;
+		right: 6em;
+		bottom: 1em;
+		width: auto;
+		}
+
+	.wpcf7 .ajax-error {
+		display: none;
+	}
+	
+	.wpcf7 .placeheld {
+		color: #888;
+	}
+
+		@include for-phone-and-tablet-portrait {
+			.wpcf7-response-output {
+				clear:both;
+				position:relative;
+				top:0;
+				margin:1em 0 0;
+				padding:1.5em;
+			}
+			
+			.wpcf7 .ajax-loader {
+				position: relative;
+				right: auto;
+				bottom: auto;
+				margin: 1em auto 0;
+			}
+			
+			/*
+			.form-quiz .wpcf7-not-valid-tip,
+			.wpcf7-not-valid-tip {
+				display: inline-block;
+				position: relative;
+				top: auto;
+				right: auto;
+				bottom: auto;
+				left: auto;
+				margin: 1em 0 .75em;
+				padding: 1em;
+				font-size: 80%;
+				line-height: 1;
+				border-radius: $border-radius-regular;
+			}
+
+			.form-quiz .wpcf7-not-valid-tip:after,
+			.wpcf7-not-valid-tip:after {
+				top: -7px;
+				left: 8px;
+				margin-top: 0;
+				border-left: 8px solid transparent;
+				border-right: 8px solid transparent;
+				border-bottom: 8px solid #d95358;
+				border-top: none;
+			}
+			*/
+	}
+}

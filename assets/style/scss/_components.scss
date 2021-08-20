@@ -1,0 +1,191 @@
+// button
+.button-hold {
+    width: 100%;
+    
+	@include flexbox();
+    @include align-items(center);
+	
+	.button {
+		&+.button {
+			margin-left: $space-xx-small;
+		}
+	}
+	
+	@include for-phone-and-tablet-portrait {
+		
+	}
+}
+
+.button {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    @include flexinline();
+    @include align-items(center);
+
+    //min-width: $button-size;
+	height: $button-size;
+    margin: 0;
+    padding: $button-padding;
+
+    border-width: .1em;
+    border-style: solid;
+    border-color: transparent;
+
+    color: $button-color !important;
+
+	font-weight: $button-font-weight;
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    line-height: $line-height-regular;
+    text-decoration: none !important;
+    white-space: nowrap;
+	
+	@include text-uppercase();
+
+    background-color: $button-background;
+    border-radius: $border-radius-button;
+	
+	@include for-phone-and-tablet-portrait {
+		padding-left: $space-large;
+		padding-right: calc(#{$space-large} - .25em);
+	}
+
+    &.small {
+		//font-size: $font-xx-small;
+		font-size: 50%;
+    }
+	
+	&.big {
+		//font-size: $font-small;
+		font-size: 75%;
+    }
+	
+	&.secondary {
+       background-color: $color-content;
+    }
+
+    &.line {
+		border-color: $color-content !important;
+        color: $color-content !important;
+		background-color: transparent !important;
+    }
+
+    &.line-white {
+		border-color: $color-base !important;
+        color: $color-base !important;
+		background-color: transparent !important;
+    }
+
+    &.flat {
+        border-color: transparent;
+        color: $color-content !important;
+		background-color: transparent;
+    }
+	
+	i {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        &:before {
+            padding: 0;
+            margin: 0;
+            font-size: 125%;
+        }
+
+        &.fa-spin {
+            top: auto;
+            @include transform(translateY(0));
+        }
+    }
+
+    &.icon-start  {
+        padding-left: calc(#{$space-small} * 2.5);
+
+        i {
+            left: $space-small;
+            text-align: left !important;
+        }
+		
+		@include for-phone-and-tablet-portrait {
+			padding-left: calc(#{$space-large} * 2.5);
+			
+			i {
+				left: $space-large;
+			}
+		}
+    }
+
+    &.icon-end  {
+        padding-right: calc(#{$button-size} * 1);
+
+        i {
+            right: $space-small;
+            text-align: right !important;
+        }
+		
+		@include for-phone-and-tablet-portrait {
+			padding-right: calc(#{$space-large} * 2.5);
+			
+			i {
+				right: $space-large;
+			}
+		}
+    }
+
+    &.icon {
+        i {
+            left: 50%;
+            @include transform(translate(-50%,-50%));
+        }
+    }
+}
+
+/*
+// cookies bar
+.cookies-bar {
+	display: none;
+	
+	position: fixed;
+	z-index: 999;
+	bottom: $space-small;
+	right: $space-small;
+	left: $space-small;
+	padding: $space-small;
+	font-family: $font-secondary;
+	font-size: $font-small;
+	font-weight: $font-weight-regular;
+	line-height: 1.5;
+	color: $color-base;
+	text-align: center;
+	background: $color-content;
+	border-radius: $border-radius-regular;
+	
+	a {
+		color: $color-base;
+		text-decoration: underline;
+		@include text-decoration-color($color-brand);
+		@include text-underline-position(under);
+	}
+	
+	.button {
+		margin-left: $space-small;
+		background: $color-brand;
+	}
+
+		@include for-phone-only {
+			left: $space-small;
+			font-size: $font-regular;
+			
+			.button {
+				width: 100%;
+				margin: $space-small 0 0 0;
+				padding: 0;
+				font-size: $font-small !important;
+				@include justify-content(center);
+			}
+		}
+}
+*/

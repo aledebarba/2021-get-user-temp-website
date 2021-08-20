@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'icons';
+	src: url('../fonts/font-icon.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+
+	font-variant: normal;
+	text-transform: none;
+
+	line-height: 1em;
+	
+	margin-left: .2em;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {content: '\e800';}
+.icon-close:before {content: '\e801';}
+.icon-bars:before {content: '\e802';}
+.icon-at:before {content: '\e803';}
+.icon-arrow-right:before {content: '\e804';}
+.icon-arrow-left:before {content: '\e805';}
+.icon-location:before {content: '\e806';}
+.icon-envelope:before {content: '\e807'; }
+.icon-building:before {content: '\e808';}
+.icon-twitter:before {content: '\f099';}
+.icon-youtube:before {content: '\f16a';}
+.icon-instagram:before {content: '\f16d';}
+.icon-whatsapp:before {content: '\f232';}
+.icon-facebook:before {content: '\f308';}
+.icon-linkedin:before {content: '\f30c';}

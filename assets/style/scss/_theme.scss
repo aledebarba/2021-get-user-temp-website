@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+$font-primary: 'Mulish', sans-serif;;
+$font-secondary: 'Tenor Sans', sans-serif;
+
+// 400
+
+$font-weight-thin: 400; // 100
+$font-weight-extra-light: 400; // 200
+$font-weight-light: 400; // 300
+$font-weight-regular: 400; // 400
+$font-weight-medium: 400; // 500
+$font-weight-semi-bold: 700; // 600
+$font-weight-bold: 700; // 700
+$font-weight-extra-bold: 700; // 800
+$font-weight-black: 700; // 900
+
+$font-regular: 1em;
+$font-xx-small: calc(#{$font-regular} * .5);
+$font-x-small: calc(#{$font-regular} * .7);
+$font-small: calc(#{$font-regular} * .8);
+$font-large: calc(#{$font-regular} * 1.25);
+$font-x-large: calc(#{$font-regular} * 2.5);
+$font-xx-large: calc(#{$font-regular} * 4);
+
+$line-height-regular: 1.5;
+$line-height-large: 2;
+$line-height-small: 1;
+
+$space-regular: 2em;
+$space-xx-small: calc(#{$space-regular} * .25);
+$space-x-small: calc(#{$space-regular} * .5);
+$space-small: calc(#{$space-regular} * .75);
+$space-large: calc(#{$space-regular} * 1.5);
+$space-x-large: calc(#{$space-regular} * 3);
+$space-xx-large: calc(#{$space-regular} * 5);
+
+$space-mobile: calc(#{$space-regular} * .5);
+$space-mobile-small: calc(#{$space-regular} * .25);
+$space-mobile-large: calc(#{$space-regular} * 1);
+
+$border-radius-small: 2px;
+$border-radius-regular: .25em;
+$border-radius-large: 3em;
+
+$width-1: 8.33vw;
+$width-2: 16.66vw;
+$width-3: 24.99vw;
+$width-4: 33.32vw;
+$width-5: 41.65vw;
+$width-6: 49.98vw;
+$width-7: 58.31vw;
+$width-8: 66.64vw;
+$width-9: 74.97vw;
+$width-10: 83.33vw;
+$width-11: 91.63vw;
+$width-12: 100vw;
+
+// colours - start
+$color-base: #{'rgb(255, 255, 255)'};
+$color-base-opacity: #{'rgba(255, 255, 255, .5)'};
+
+$color-content: #{'rgb(27, 27, 27)'};
+$color-content-opacity: #{'rgba(27, 27, 27, .5)'};
+
+$color-content-shade: #{'rgb(209, 155, 55)'}; // golden
+$color-content-shade-opacity: #{'rgba(209, 155, 55, .5)'};
+
+$color-brand: #{'rgb(242, 123, 138)'}; // pink
+$color-brand-opacity: #{'rgba(242, 123, 138, .5)'};
+
+$color-brand-shade: #EEEEEE; // dark pink
+$color-brand-shade-opacity: #{'rgb(222, 93, 131, .5)'};
+
+$color-extra: $color-brand;
+$color-extra-opacity: $color-brand-opacity;
+// colours - end
+
+// button
+$button-size: 5em;
+$button-padding: .15em calc(#{$space-small} - .15em) 0 $space-small;
+
+$button-font-family: $font-secondary;
+$button-font-size: $font-x-small;
+$button-font-weight: $font-weight-regular;
+
+$button-color: $color-base;
+$button-background: $color-brand;
+
+$border-radius-button: $border-radius-small;

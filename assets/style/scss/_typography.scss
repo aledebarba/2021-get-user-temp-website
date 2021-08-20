@@ -1,0 +1,186 @@
+// typography
+body {
+	font-family: $font-primary;
+	font-size: 1em;
+	//font-size: calc((18px + (23 - 18) * ((100vw - 300px) / (1600 - 300))));
+	// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+	font-weight: $font-weight-regular;
+	line-height: 1;
+	text-align: left;
+	
+	@include for-tablet-portrait-only {
+		//font-size: 25px !important;
+	}
+	
+	@include for-tablet-landscape-only {
+		//font-size: 17px !important;
+	}
+    
+    @include for-phone-only {
+		//font-size: 15px !important;
+	}
+}
+
+p {
+	font-size: calc(#{$font-regular} * .95);
+	font-weight: $font-weight-light;
+	line-height: $line-height-large;
+
+	&+p {
+		margin-top: $space-x-small;
+        
+        
+	}
+    
+    &.big {
+        font-size: $font-large;
+        line-height: $line-height-large;
+    }
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: $font-regular;
+		
+		&+p {
+			margin-top: $space-regular;
+		}
+	}
+}
+
+strong,
+.strong {
+	font-weight: $font-weight-bold;
+}
+
+// headlines
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-weight: $font-weight-regular;
+    
+	a {
+		display: block;
+	}
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+	font-family: $font-primary;
+}
+
+h1, .h1,
+h5, .h5,
+h6, .h6 {
+	font-family: $font-secondary;
+}
+
+.h1 {
+    margin-left: -.1em;
+    margin-bottom: $space-xx-small;
+    
+	font-size: $font-x-large;
+    letter-spacing: -.05em;
+	line-height: $line-height-small;
+    
+    &.big {
+        font-size: $font-xx-large;
+    }
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: calc(#{$font-regular} * 2);
+	}
+}
+
+.h2 {
+    margin-left: -.1em;
+    
+	font-size: $font-x-large;
+    font-weight: $font-weight-bold;
+	line-height: $line-height-small;
+	text-transform: uppercase;
+    
+    &.big {
+        font-size: calc(#{$font-regular} * 8);
+    }
+
+	@include for-phone-and-tablet-portrait {
+		font-size: calc(#{$font-regular} * 1.75);
+	}
+}
+
+.h3 {
+	font-size: $font-x-large;
+	line-height: $line-height-small;
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: calc(#{$font-regular} * 1.75);
+	}
+}
+
+.h4 {
+	font-weight: $font-weight-bold;
+	font-size: $font-xx-large;
+	line-height: $line-height-regular;
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: $font-x-large;
+	}
+}
+
+.h5 {
+	font-size: $font-large;
+	line-height: $line-height-regular;
+    
+    &.big {
+        font-size: calc(#{$font-regular} * 1.5);
+    }
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: $font-large;
+	}
+}
+
+.h6 {
+    margin-bottom: $space-x-small;
+    
+	font-size: $font-small;
+    @include text-uppercase();
+	
+	@include for-phone-and-tablet-portrait {
+		font-size: $font-small;
+	}
+}
+
+// font-size
+small,
+.font-x-small {
+	font-size: $font-x-small;
+}
+
+.font-small {
+	font-size: $font-small;
+}
+
+// font-family
+.font-secondary {
+    font-family: $font-secondary;
+    font-weight: $font-weight-regular !important;
+}
+
+// colours
+.color-brand {
+    color: $color-brand;
+}
+
+.line-brand {
+    -webkit-text-stroke: .015em $color-brand;
+    -webkit-text-fill-color: transparent;
+}
+
+// text
+.text-uppercase {
+    @include text-uppercase;
+}
