@@ -122,6 +122,24 @@ img {
             padding: $space-mobile;
         }
     }
+	
+	.hold-intro {
+        position: relative;
+        padding: 0 calc(#{$space-x-large} * .9);
+        
+        @include for-phone-only {
+            padding: $space-mobile;
+        }
+		
+		.item {
+			width: 80%;
+			padding-bottom: $space-x-large;
+		}
+		
+		.button-hold {
+			margin-top: $space-regular;
+		}
+    }
 }
 
 // header
@@ -836,6 +854,13 @@ img {
     &, a {
         color: $color-content;
     }
+	
+	h1 {
+		font-size: calc(#{$font-x-large} * .85);
+		font-weight: $font-weight-bold;
+		letter-spacing: .05em;
+		line-height: $line-height-regular;
+	}
 	
 	figure {
 		position: absolute;
