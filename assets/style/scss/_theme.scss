@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url("https://use.typekit.net/ajg7gzj.css");
 
-$font-primary: 'Mulish', sans-serif;;
-$font-secondary: 'Tenor Sans', sans-serif;
+$font-primary: zenon, sans-serif;;
+$font-secondary: 'Mulish', sans-serif;
 
 // 400
 
@@ -61,7 +61,7 @@ $width-12: 100vw;
 $color-base: #{'rgb(255, 255, 255)'};
 $color-base-opacity: #{'rgba(255, 255, 255, .5)'};
 
-$color-content: #{'rgb(27, 27, 27)'};
+$color-content: #{'rgb(17, 36, 40)'};
 $color-content-opacity: #{'rgba(27, 27, 27, .5)'};
 
 $color-content-shade: #{'rgb(209, 155, 55)'}; // golden
@@ -70,7 +70,7 @@ $color-content-shade-opacity: #{'rgba(209, 155, 55, .5)'};
 $color-brand: #{'rgb(242, 123, 138)'}; // pink
 $color-brand-opacity: #{'rgba(242, 123, 138, .5)'};
 
-$color-brand-shade: #EEEEEE; // dark pink
+$color-brand-shade: #{linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%)}; // dark pink
 $color-brand-shade-opacity: #{'rgb(222, 93, 131, .5)'};
 
 $color-extra: $color-brand;

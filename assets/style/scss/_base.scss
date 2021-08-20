@@ -208,7 +208,7 @@ img {
             }
             
             a {
-                color: $color-brand;
+                color: $color-content;
                 font-family: $font-secondary;
                 
                 @include text-uppercase();
@@ -246,7 +246,7 @@ img {
             ul {
                 li {
                     a {
-                        color: $color-base;
+                        color: $color-content;
                     }
                 }
             }
@@ -756,7 +756,7 @@ img {
     //margin-top: -10em;
     
     &, a {
-        color: $color-base;
+        color: $color-content;
     }
 	
 	figure {
