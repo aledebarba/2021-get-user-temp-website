@@ -22,7 +22,7 @@ body {
 }
 
 p {
-	font-size: calc(#{$font-regular} * .95);
+	font-size: $font-large;
 	font-weight: $font-weight-light;
 	line-height: $line-height-large;
 
@@ -48,7 +48,7 @@ p {
 
 strong,
 .strong {
-	font-weight: $font-weight-bold;
+	font-weight: $font-weight-black;
 }
 
 // headlines
@@ -58,7 +58,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-bold;
     
 	a {
 		display: block;
@@ -68,20 +68,20 @@ h6, .h6 {
 h2, .h2,
 h3, .h3,
 h4, .h4 {
-	font-family: $font-primary;
+	font-family: $font-secondary;
 }
 
 h1, .h1,
 h5, .h5,
 h6, .h6 {
-	font-family: $font-secondary;
+	font-family: $font-primary;
 }
 
 .h1 {
     margin-left: -.1em;
     margin-bottom: $space-xx-small;
     
-	font-size: $font-x-large;
+	font-size: calc(#{$font-xx-large} *.9);
     letter-spacing: -.05em;
 	line-height: $line-height-small;
     
@@ -112,7 +112,7 @@ h6, .h6 {
 }
 
 .h3 {
-	font-size: $font-x-large;
+	font-size: calc(#{$font-x-large} * .85);
 	line-height: $line-height-small;
 	
 	@include for-phone-and-tablet-portrait {
@@ -122,8 +122,9 @@ h6, .h6 {
 
 .h4 {
 	font-weight: $font-weight-bold;
-	font-size: $font-xx-large;
+	font-size: $font-large;
 	line-height: $line-height-regular;
+	margin-bottom: $space-regular;
 	
 	@include for-phone-and-tablet-portrait {
 		font-size: $font-x-large;
@@ -168,6 +169,14 @@ small,
 .font-secondary {
     font-family: $font-secondary;
     font-weight: $font-weight-regular !important;
+	
+	&.bold {
+		font-weight: $font-weight-bold!important;
+	}
+	
+	strong {
+		font-weight: $font-weight-black;
+	}
 
 	.color-base {
 		color: $color-base;

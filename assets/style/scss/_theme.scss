@@ -6,15 +6,15 @@ $font-secondary: 'Mulish', sans-serif;
 
 // 400
 
-$font-weight-thin: 400; // 100
-$font-weight-extra-light: 400; // 200
+$font-weight-thin: 200; // 100
+$font-weight-extra-light: 300; // 200
 $font-weight-light: 400; // 300
 $font-weight-regular: 400; // 400
-$font-weight-medium: 400; // 500
-$font-weight-semi-bold: 700; // 600
+$font-weight-medium: 500; // 500
+$font-weight-semi-bold: 600; // 600
 $font-weight-bold: 700; // 700
-$font-weight-extra-bold: 700; // 800
-$font-weight-black: 700; // 900
+$font-weight-extra-bold: 800; // 800
+$font-weight-black: 900; // 900
 
 $font-regular: 1em;
 $font-xx-small: calc(#{$font-regular} * .5);
@@ -25,7 +25,7 @@ $font-x-large: calc(#{$font-regular} * 2.5);
 $font-xx-large: calc(#{$font-regular} * 4);
 
 $line-height-regular: 1.3;
-$line-height-large: 1.8;
+$line-height-large: 2.2;
 $line-height-small: 1;
 
 $space-regular: 2em;
@@ -40,9 +40,9 @@ $space-mobile: calc(#{$space-regular} * .5);
 $space-mobile-small: calc(#{$space-regular} * .25);
 $space-mobile-large: calc(#{$space-regular} * 1);
 
-$border-radius-small: 4px;
-$border-radius-regular: 1em;
-$border-radius-large: 6em;
+$border-radius-small: 1em;
+$border-radius-regular: .6em;
+$border-radius-large: 2em;
 
 $width-1: 8.33vw;
 $width-2: 16.66vw;
@@ -77,14 +77,14 @@ $color-extra-opacity: $color-brand-opacity;
 // colours - end
 
 // button
-$button-size: 5em;
-$button-padding: .15em calc(#{$space-large} - .2em) 0 $space-large;
+$button-size: 3.5em;
+$button-padding: .2em calc(#{$space-large} - .2em) .2em $space-large;
 
 $button-font-family: $font-secondary;
-$button-font-size: $font-x-small;
+$button-font-size: $font-large;
 $button-font-weight: $font-weight-bold;
 
 $button-color: $color-base;
-$button-background: $color-brand;
+$button-background: $color-content;
 
-$border-radius-button: $border-radius-large;
+$border-radius-button: $border-radius-regular;

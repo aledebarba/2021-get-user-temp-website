@@ -29,7 +29,7 @@
     margin: 0;
     padding: $button-padding;
 
-    border-width: .2em;
+    border-width: .15em;
     border-style: solid;
     border-color: transparent;
 
@@ -42,8 +42,6 @@
     text-decoration: none !important;
     white-space: nowrap;
 	
-	@include text-uppercase();
-
     background-color: $button-background;
     border-radius: $border-radius-button;
 	
@@ -63,7 +61,7 @@
     }
 	
 	&.secondary {
-       background-color: $color-content;
+       background-color: $color-brand;
     }
 
     &.line {

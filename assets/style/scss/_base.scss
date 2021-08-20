@@ -540,7 +540,7 @@ img {
 	// hold
 	.hold {
         .button-hold {
-			margin-top: $space-regular;
+			margin-top: calc(#{$space-x-large} * .7);
 		}
 		
 		@include for-phone-only {
@@ -731,7 +731,7 @@ img {
     
     &.image-left {
         .hold {
-            padding-left: $space-large !important;
+            padding-left: $space-x-large !important;
             
              @include for-phone-only {
                 padding: $space-mobile !important;
@@ -747,68 +747,8 @@ img {
     
     @include for-phone-only {
         display: block;}
-    background: $color-content;
-    
-    &.image-start {
-        @include align-items(flex-start);
-        
-        figure {
-            padding-top: $space-regular;
-        }
-    }
-    
-    &.image-sticky {
-        figure {
-            @include sticky();
-            
-            @include for-phone-only {
-                position: static;
-            }
-        }
-    }
-    
-    figure {
-        width: 35%;
-        
-        @include for-phone-only {
-            width: 90%;
-            margin: 0 auto;
-        }
-    }
-    
-    .hold {
-        width: 65%;
-        
-        @include for-phone-only {
-            width: auto;
-            margin: 0 auto;
-        }
-    }
-    
-    &.image-right {
-        figure {
-            @include order(2);
-        }
-
-        .hold {
-            @include order(1);
-            padding-right: $space-large !important;
-            
-            @include for-phone-only {
-                padding: $space-mobile !important;
-            }
-        }
-    }
-    
-    &.image-left {
-        .hold {
-            padding-left: $space-large !important;
-            
-             @include for-phone-only {
-                padding: $space-mobile !important;
-            }
-        }
-    }
+    	background: $color-content;
+		min-height: 100vh;
 }
 
 // contact
@@ -846,7 +786,7 @@ img {
     z-index: 90;
     position: relative;
     
-	height: 100vh;
+	min-height: 100vh;
 	background: $color-brand-shade;
     
     //margin-top: -10em;
@@ -855,8 +795,7 @@ img {
         color: $color-content;
     }
 	
-	h1 {
-		font-size: calc(#{$font-x-large} * .85);
+	h3 {
 		font-weight: $font-weight-bold;
 		letter-spacing: .05em;
 		line-height: $line-height-regular;
