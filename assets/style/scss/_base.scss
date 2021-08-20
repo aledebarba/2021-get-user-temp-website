@@ -116,7 +116,7 @@ img {
     .hold {
         position: relative;
         margin: 0 auto;
-        padding: 0 $space-xx-large;
+        padding: 0 calc(#{$space-x-large} * .9);
         
         @include for-phone-only {
             padding: $space-mobile;
@@ -131,7 +131,7 @@ img {
     width: 100%;
     
     .hold {
-        height: 10em;
+        height: 20em;
         //transition: height .5s;
         
         @include for-phone-only {
@@ -140,7 +140,7 @@ img {
     }
     
     .logo {
-        height: 7em;
+        height:13.5em;
         //transition: height .5s;
         
         @include for-phone-only {
@@ -210,6 +210,8 @@ img {
             a {
                 color: $color-content;
                 font-family: $font-secondary;
+				font-size: $font-large;
+				font-weight: $font-weight-bold;
                 
                 @include text-uppercase();
             }
@@ -460,17 +462,18 @@ img {
 	z-index: 90;
 	
 	&+[class^="widget-"] {
-		margin-top: $space-xx-large;
+		padding: $space-x-large calc(#{$space-x-large} * .9);
+		
 		
 		@include for-phone-only {
-			margin-top: $space-mobile-large;
+			padding: $space-mobile-large $space-mobile-large;
 		}
 	}
     
     // margin
-    &.no-margin {
-        &.no-margin {
-            margin-top: 0;
+    &.with-margin {
+        &.with-margin {
+            margin-top: $space-xx-large;
         }
     }
     
@@ -652,6 +655,81 @@ img {
     @include for-phone-only {
         display: block;}
     
+    
+    &.image-start {
+        @include align-items(flex-start);
+        
+        figure {
+            padding-top: $space-regular;
+        }
+    }
+    
+    &.image-sticky {
+        figure {
+            @include sticky();
+            
+            @include for-phone-only {
+                position: static;
+            }
+        }
+    }
+    
+    figure {
+        width: 42.85%;
+				
+		svg {
+			width: 100%;
+		}
+        
+        @include for-phone-only {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    
+    .hold {
+        width: 65%;
+        
+        @include for-phone-only {
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+    
+    &.image-right {
+        figure {
+            @include order(2);
+        }
+
+        .hold {
+            @include order(1);
+            padding-right: $space-large !important;
+            
+            @include for-phone-only {
+                padding: $space-mobile !important;
+            }
+        }
+    }
+    
+    &.image-left {
+        .hold {
+            padding-left: $space-large !important;
+            
+             @include for-phone-only {
+                padding: $space-mobile !important;
+            }
+        }
+    }
+}
+
+// about
+.widget-about {
+ @include flexbox();
+    @include align-items(center);
+    
+    @include for-phone-only {
+        display: block;}
+    background: $color-content;
     
     &.image-start {
         @include align-items(flex-start);

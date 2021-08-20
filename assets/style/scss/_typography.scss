@@ -168,11 +168,19 @@ small,
 .font-secondary {
     font-family: $font-secondary;
     font-weight: $font-weight-regular !important;
+
+	.color-base {
+		color: $color-base;
+	}
 }
 
 // colours
 .color-brand {
     color: $color-brand;
+}
+
+.color-base {
+    color: $color-base;
 }
 
 .line-brand {

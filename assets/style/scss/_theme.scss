@@ -58,20 +58,19 @@ $width-11: 91.63vw;
 $width-12: 100vw;
 
 // colours - start
-$color-base: #{'rgb(255, 255, 255)'};
-$color-base-opacity: #{'rgba(255, 255, 255, .5)'};
+$color-base: #{'rgb(238, 238, 238)'};
+$color-base-opacity: #{'rgba(238, 238, 238, .5)'};
 
 $color-content: #{'rgb(17, 36, 40)'};
-$color-content-opacity: #{'rgba(27, 27, 27, .5)'};
+$color-content-opacity: #{'rgba(17, 36, 40, .5)'};
 
-$color-content-shade: #{'rgb(209, 155, 55)'}; // golden
-$color-content-shade-opacity: #{'rgba(209, 155, 55, .5)'};
+$color-content-shade: #{'rgb(9, 28, 32)'}; // dark grey
+$color-content-shade-opacity: #{'rgba(9, 28, 32, .5)'};
 
-$color-brand: #{'rgb(242, 123, 138)'}; // pink
-$color-brand-opacity: #{'rgba(242, 123, 138, .5)'};
+$color-brand: #{'rgb(38, 169, 224)'}; // sky blue
+$color-brand-opacity: #{'rgba(38, 169, 224, .5)'};
 
-$color-brand-shade: #{linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%)}; // dark pink
-$color-brand-shade-opacity: #{'rgb(222, 93, 131, .5)'};
+$color-brand-shade: #{linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%)}; // gradient
 
 $color-extra: $color-brand;
 $color-extra-opacity: $color-brand-opacity;
