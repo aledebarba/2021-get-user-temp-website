@@ -85,7 +85,7 @@ h1, .h1 {
     }
 	
 	@include for-phone-and-tablet-portrait {
-		font-size: calc(#{$font-regular} * 2);
+		font-size: calc(#{$font-large} * 2);
 	}
 }
 
@@ -119,10 +119,19 @@ h1, .h1 {
 	font-size: calc(#{$font-x-large} * .7);
 	line-height: $line-height-regular;
 	margin-top: $space-x-small;
-	margin-bottom: $space-regular;
+	margin-bottom: $space-small;
+	
+	i{
+		margin-right: 1em;
+		
+		@include for-phone-only {
+			margin: 0 0 $space-mobile-small 0;
+			display: block;
+		}
+	}
 	
 	@include for-phone-and-tablet-portrait {
-		font-size: $font-x-large;
+		font-size: calc(#{$font-large} * 1.4);
 	}
 }
 
