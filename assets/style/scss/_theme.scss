@@ -40,9 +40,9 @@ $space-mobile: calc(#{$space-regular} * .5);
 $space-mobile-small: calc(#{$space-regular} * .25);
 $space-mobile-large: calc(#{$space-regular} * 1);
 
-$border-radius-small: 1em;
+$border-radius-small: .4em;
 $border-radius-regular: .6em;
-$border-radius-large: 2em;
+$border-radius-large: 1em;
 
 $width-1: 8.33vw;
 $width-2: 16.66vw;
@@ -71,6 +71,8 @@ $color-brand: #{'rgb(38, 169, 224)'}; // sky blue
 $color-brand-opacity: #{'rgba(38, 169, 224, .5)'};
 
 $color-brand-shade: #{linear-gradient(180deg, #FFFFFF 0%, #EEEEEE 100%)}; // gradient
+
+$brand-gradient: #{linear-gradient(227.29deg, #F9EC31 4.68%, #26A9E0 104.68%)}; //brand gradient
 
 $color-extra: $color-brand;
 $color-extra-opacity: $color-brand-opacity;

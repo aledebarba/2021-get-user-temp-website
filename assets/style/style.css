@@ -175,6 +175,9 @@ img { display: block; width: 100%; height: auto; margin: 0; padding: 0; }
 [class^="widget-"].with-margin.with-margin { margin-top: calc(2em * 5); }
 [class^="widget-"].narrow .hold { width: 74.97vw !important; }
 @media only screen and (max-width: 599px) { [class^="widget-"].narrow .hold { width: auto !important; } }
+[class^="widget-"].narrow.centered { margin: auto; }
+[class^="widget-"].narrow.centered .hold { width: 66.64vw !important; }
+@media only screen and (max-width: 599px) { [class^="widget-"].narrow.centered .hold { width: auto !important; } }
 [class^="widget-"].narrow-extra .hold { width: 58.31vw !important; }
 @media only screen and (max-width: 599px) { [class^="widget-"].narrow-extra .hold { width: auto !important; } }
 [class^="widget-"].text-center { text-align: center; }
@@ -188,21 +191,17 @@ img { display: block; width: 100%; height: auto; margin: 0; padding: 0; }
 @media only screen and (max-width: 599px) { [class^="widget-"] .boxes { display: block; }
   [class^="widget-"] .boxes .item { width: 100%; }
   [class^="widget-"] .boxes .item + .item { margin: calc(2em * .75) 0 0 0 !important; } }
+[class^="widget-"] .list-icons-33 { display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; flex-wrap: wrap; -webkit-flex-direction: row; -moz-flex-direction: row; flex-direction: row; margin-top: calc(2em * 1.5); }
+[class^="widget-"] .list-icons-33 li { -webkit-flex-grow: 1; -moz-flex-grow: 1; flex-grow: 1; width: 33%; padding: 3%; }
+[class^="widget-"] .list-icons-33 li figure { display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-align-items: center; -moz-align-items: center; align-items: center; background: linear-gradient(227.29deg, #F9EC31 4.68%, #26A9E0 104.68%); border-radius: 0.4em; height: auto; }
+[class^="widget-"] .list-icons-33 li figure:before { content: ''; display: block; padding-top: 100%; }
+[class^="widget-"] .list-icons-33 li figure i { font-size: 5vw; }
+[class^="widget-"] .list-icons-33 li p { font-family: "Mulish", sans-serif; font-size: 1em; color: rgb(17, 36, 40); font-weight: 700; margin-top: calc(2em * .25); }
+[class^="widget-"] .list-images-50 { display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; flex-wrap: wrap; -webkit-flex-direction: row; -moz-flex-direction: row; flex-direction: row; margin-top: calc(2em * 1.5); }
+[class^="widget-"] .list-images-50 li { -webkit-flex-grow: 1; -moz-flex-grow: 1; flex-grow: 1; width: 50%; padding: 3%; }
+[class^="widget-"] .list-images-50 li figure img { border-radius: 0.4em; -webkit-box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.2); }
+[class^="widget-"] .list-images-50 li p { font-family: "Mulish", sans-serif; font-size: 1em; color: rgb(238, 238, 238); font-weight: 700; margin-top: calc(2em * .25); }
 
-/*
-// courses
-.widget-courses { .element, figure { @include sticky(); width: 100%; }  .element { z-index: 100; height: 100vh;  pointer-events: none;  &:after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 30vh;  background: $color-base; background: -webkit-linear-gradient(bottom, $color-base 0%, rgba(255,255,255,0) 100%); background: -o-linear-gradient(bottom, $color-base 0%, rgba(255,255,255,0) 100%); background: linear-gradient(to top, $color-base 0%, rgba(255,255,255,0) 100%); } }  figure { overflow: hidden;  z-index: 80; height: 70vh;
-		
-		img {
-			@include image-center();
-		}
-		
-		@include for-phone-only {
-			height: 100vw;
-		}
-	}  .headline { position: relative; z-index: 90; margin-bottom: -2.5em; text-align: center; }  .hold { position: relative; z-index: 90;  margin-top: -140vh !important; padding-left: 50% !important; padding-bottom: 40vh !important;  .item { &+.item { margin-top: $space-small; }  padding: $space-large; background: #f8f6f2; border-radius: $border-radius-small; } }  // scroll &.scroll-hold { .element { //top: 0; }  figure { transition: transform .5s; @include transform(translate3d(0, -2em, 0)); } }
-}
-*/
 .widget-image { display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-align-items: center; -moz-align-items: center; align-items: center; }
 @media only screen and (max-width: 599px) { .widget-image { display: block; } }
 .widget-image.image-start { -webkit-align-items: flex-start; -moz-align-items: flex-start; align-items: flex-start; }
@@ -248,28 +247,28 @@ p.big { font-size: calc(1em * 1.25); line-height: 2.2; }
 
 strong, .strong { font-weight: 900; }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-weight: 700; }
-h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a, h6 a, .h6 a { display: block; }
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 { font-weight: 700; }
+h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a { display: block; }
 
-h2, .h2, h3, .h3, h4, .h4 { font-family: "Mulish", sans-serif; }
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { font-family: "Mulish", sans-serif; }
 
-h1, .h1, h5, .h5, h6, .h6 { font-family: zenon, sans-serif; }
+h1, .h1 { font-family: zenon, sans-serif; }
 
-.h1 { margin-left: -.1em; margin-bottom: calc(2em * .25); font-size: calc(calc(1em * 4) *.9); letter-spacing: -.05em; line-height: 1; }
+.h1 { margin-bottom: calc(2em * .25); font-size: calc(calc(1em * 4) *.9); line-height: 1; }
 .h1.big { font-size: calc(1em * 4); }
 @media only screen and (max-width: 1024px) and (orientation: portrait) { .h1 { font-size: calc(1em * 2); } }
 
-.h2 { margin-left: -.1em; font-size: calc(1em * 2.5); font-weight: 700; line-height: 1; text-transform: uppercase; }
+.h2 { font-size: calc(1em * 2.5); font-weight: 700; line-height: 1; text-transform: uppercase; }
 .h2.big { font-size: calc(1em * 8); }
 @media only screen and (max-width: 1024px) and (orientation: portrait) { .h2 { font-size: calc(1em * 1.75); } }
 
 .h3 { font-size: calc(calc(1em * 2.5) * .85); line-height: 1; }
 @media only screen and (max-width: 1024px) and (orientation: portrait) { .h3 { font-size: calc(1em * 1.75); } }
 
-.h4 { font-weight: 700; font-size: calc(1em * 1.25); line-height: 1.3; margin-bottom: 2em; }
+.h4 { font-weight: 700; font-size: calc(calc(1em * 2.5) * .7); line-height: 1.3; margin-top: calc(2em * .5); margin-bottom: 2em; }
 @media only screen and (max-width: 1024px) and (orientation: portrait) { .h4 { font-size: calc(1em * 2.5); } }
 
-.h5 { font-size: calc(1em * 1.25); line-height: 1.3; }
+.h5 { font-size: calc(1em * 1.25); line-height: calc(2.2 * .9); }
 .h5.big { font-size: calc(1em * 1.5); }
 @media only screen and (max-width: 1024px) and (orientation: portrait) { .h5 { font-size: calc(1em * 1.25); } }
 
